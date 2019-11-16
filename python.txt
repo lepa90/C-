@@ -1,0 +1,113 @@
+lista=[50,20,30,40,45,80,81,78,82,83,84,90,100]
+lista.sort()
+print(lista)
+szukanaLiczba=81
+indexPierwszy=0
+indexKoncowy=len(lista)-1
+lk=lista[indexKoncowy]
+isr=round((indexPierwszy+indexKoncowy)/2)
+lsr=lista[isr]
+
+for i in range(0,len(lista)):
+  isr=round((indexPierwszy+indexKoncowy)/2)
+  lsr=lista[isr]
+  if(szukanaLiczba<lsr):
+    indexKoncowy=isr-1
+  elif(szukanaLiczba>lsr):
+    indexPierwszy=isr+1
+  else:
+    print("znaleziono liczbe na indexie: ",isr)
+    break
+    
+print("szzukana liczba to",lsr)
+
+
+lista=[50,20,30,40,45,80,81,78,82,83,84,90,100]
+lista.sort()
+print(lista)
+szukanaLiczba=81
+indexPierwszy=0
+indexKoncowy=len(lista)-1
+indexSredni=round((indexPierwszy+indexKoncowy)/2)
+liczbaSrednia=lista[indexSredni]
+
+lista=[8,7,10,13,12,23,15,16,27,67,54,68,99]
+ip=0
+n=ip+1
+print(n)
+print(ip)
+ik=len(lista)-1
+x=n+1
+print(ik)
+for i in range(ip,ik):
+  
+  if(lista[i]>lista[i+1]):
+    lista[i]=lista[i+1]
+    
+  print(lista[i])
+
+for i in range(0,len(lista)):
+  indexSredni=round((indexPierwszy+indexKoncowy)/2)
+  liczbaSrednia=lista[indexSredni]
+  if(szukanaLiczba<liczbaSrednia):
+    indexKoncowy=indexSredni-1
+  elif(szukanaLiczba>liczbaSrednia):
+    indexPierwszy=indexSredni+1
+  else:
+    print("znaleziono liczbe na indexie: ",indexSredni)
+    break
+    
+print("szzukana liczba to",liczbaSrednia)
+
+cclass Node: 
+  def __init__(self,initdata):    
+    self.data = initdata 
+    self.next = None
+  def getData(self): 
+    return self.data
+  def getNext(self): 
+    return self.next
+  def setData(self,newdata): 
+    self.data = newdata
+  def setNext(self,newnext): 
+    self.next = newnext
+
+class UnorderedList:
+  def __init__(self): 
+    self.head = None
+  def add(self,item): 
+    temp = Node(item) 
+    temp.setNext(self.head) 
+    self.head = temp
+  def size(self): 
+    current = self.head 
+    count = 0 
+    while current != None: 
+      count = count + 1 
+      gcurrent = current.getNext()
+    return count
+
+def search(self,item): 
+  current = self.head 
+  found = False 
+  while current != None and not found: 
+    if current.getData() == item: 
+      found = True 
+    else:
+      current = current.getNext()
+  return found
+
+def remove(self,item): 
+  current = self.head
+  previous = None 
+  found = False 
+  while not found: 
+    if current.getData() == item: 
+      found = True 
+    else: 
+      previous = current 
+      current = current.getNext()
+    if previous == None: 
+      self.head = current.getNext() 
+    else: 
+      previous.setNext(current.getNext())

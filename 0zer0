@@ -1,0 +1,92 @@
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+class man{
+	public:
+	int age;
+	int height;
+	int sex;
+	int pesel;
+	public:
+		int getAge() {
+       	return age;
+    	}
+    	int getHeight() {
+       	return height;
+    	}
+    	int getSex() {
+       	return sex;
+    	}
+    	int getPesel() {
+       	return pesel;
+    	}
+		void setAge(int _age){
+			age=_age;
+		}
+		void setHeight(int _height){
+			height=_height;
+		}
+		void setSex(int _sex){
+			sex=_sex;
+		}
+		void setPesel(int _pesel){
+			pesel=_pesel;
+		}
+		man(int _age=0, int _height=0, int _sex=0, int _pesel=0){
+			age=_age;
+			height=_height;
+			sex=_sex;
+			pesel=_pesel;
+		}
+		man(){
+			int age=20; 
+			int height=45;
+			int sex=1; 
+			int pesel=7676676;
+		}	
+};
+class male :public man{
+	
+	string name;
+	string surname;
+	public:
+		vector<int> basket;
+		string getName(){
+			return name;
+		}
+		string getSurname(){
+			return surname;
+		}
+		void setName(string _name){
+			name=_name;
+		}
+		void setSurame(string _surname){
+			surname=_surname;
+		}
+	
+	
+		male(string name = "brak",string surname="niema"){
+			this->name=name;
+			this->surname=surname;
+			
+		}
+		male(){
+			name="asek";
+			surname="kasek";
+			man.age=78;
+			man.height=68;
+			man.pesel=689987;
+			man.sex=2;
+		}
+};
+int main(int argc, char** argv) {
+	man asdf();
+	
+	
+	cout <<"asdf";
+	return 0;
+	
+}

@@ -1,0 +1,143 @@
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h>
+using namespace std;
+#include <vector>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+class man{
+	
+	
+	public:
+    int age;
+	  int height;
+	  int sex;
+	  int pesel;
+		int getAge() {
+       	return age;
+    	}
+    	int getHeight() {
+       	return height;
+    	}
+    	int getSex() {
+       	return sex;
+    	}
+    	int getPesel() {
+       	return pesel;
+    	}
+		void setAge(int _age){
+			age=_age;
+		}
+		void setHeight(int _height){
+			height=_height;
+		}
+		void setSex(int _sex){
+			sex=_sex;
+		}
+		void setPesel(int _pesel){
+			pesel=_pesel;
+		}
+    man(){
+		 age=20; 
+		 height=45;
+		 sex=1; 
+		 pesel=7676676;
+		}	
+		man(int _age, int _height, int _sex, int _pesel){
+			this->age=_age;
+			this->height=_height;
+			this->sex=_sex;
+			this->pesel=_pesel;
+		}
+		
+};
+class male: public man{
+	//- atrybut Basket (wektor obiektów typu Product) (może być publiczny) 
+   
+    string surname;
+	public:
+     vector<char>basket ;
+    string name;
+	
+		string getName(){
+			return name;
+		}
+		string getSurname(){
+			return surname;
+		}
+		void setName(string _name){
+			name=_name;
+		}
+		void setSurame(string _surname){
+			surname=_surname;
+		}
+    male(string _name , string _surname){
+      this->name=_name;
+      this->surname=_surname;
+    }
+    male(){
+      name="asddff";
+      surname="sdfsdfsdf";
+    }
+};
+class product:male{
+
+
+//- konstruktor domyślny
+//- konstruktor z 2 argumentami
+
+
+
+public:
+  
+  int Price;
+  string name;
+  string getName(){
+    return name;
+  }
+  void setName(string _Name){
+    name=_Name;
+
+  }
+	int getPrice(){
+    return Price;
+}	
+  void setPrice(int _Price){
+    Price=_Price;
+
+  }
+  
+  product(string _Name, int _Price){
+    this->name=_Name;
+    this->Price=_Price;
+
+  }
+  product(){
+    name="woper";
+    Price=986;
+
+  }
+  };
+  static vector <product> vProducts;
+  
+  void addToBasket(){
+  product element = product();
+  vProducts.push_back(element);
+  vProducts.pop_back(); 
+  };
+  
+ 
+
+
+ int main(int argc, char** argv) {
+  male kliencik = male("zbigniew", "duzy");
+  male kilento =  male("wladek", "maly");
+	for(int i=0;i<14;i++){
+    addToBasket();
+  }
+  product *kons = new product;
+ 
+	return 0;
+	
+};
